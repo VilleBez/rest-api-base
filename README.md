@@ -3,13 +3,10 @@ REST API Common Framework base on JAX-RS.
 
 Provide the following functions:  
 
-* Exception Mapping (錯誤處理機制，包括 HTTP Status 400、500 之錯誤)
+* Exception Mapping (Error Handle, include HTTP Status 400、500)
 * XSS Filter, Utils, JsonDeserialize
-* CORS Filter
-* Success Filter
-* Paging
-	* CursorPagingModel 游標型分頁，搭配 CursorUtils 對游標加解密編碼
-	* OffsetPagingModel 位移型分頁
+* Request, Response wrapper Filter
+
 
 ## Framework
 
@@ -19,15 +16,7 @@ Provide the following functions:
 
 ## Usage
 
-1. dependencies
-
-	```
-	dependencies {
-		compile group: 'idv.villebez.api', name: 'rest-api-base', version: '0.3.0'
-	}
-	```
-	
-2. jersey example
+jersey example
 
 	```
 	<servlet>
@@ -38,7 +27,7 @@ Provide the following functions:
 			<param-value>
 				idv.villebez.exception.mapper,
 				idv.villebez.filter
-        		</param-value>
+        	</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
