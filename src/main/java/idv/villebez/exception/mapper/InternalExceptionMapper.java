@@ -7,8 +7,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
@@ -23,7 +22,7 @@ import idv.villebez.util.RequestUtils;
  */
 @Provider
 public class InternalExceptionMapper implements ExceptionMapper<Throwable> {
-	private Logger log = LoggerFactory.getLogger(this.getClass());
+	private Logger log = Logger.getLogger(this.getClass());
 
 	@Context
 	private HttpServletRequest request;
