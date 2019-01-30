@@ -19,7 +19,7 @@ public class CORSFilter implements ContainerResponseFilter {
 		MultivaluedMap<String, Object> headers = responseContext.getHeaders();
 		headers.add("Access-Control-Allow-Origin", "http://petstore.swagger.io");
 		headers.add("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, PATCH");
-		headers.add("Access-Control-Allow-Headers", "Content-Type, 104-JWT");
+		headers.add("Access-Control-Allow-Headers", "Content-Type, Set-Cookie");
 	}
 
 }
